@@ -6,6 +6,8 @@ class Libserialport < Formula
   #sha1 ''
   version 'dev'
 
+  depends_on 'glib'
+
   def install
     system "./autogen.sh"
     system "./configure", "--prefix=#{prefix}"
