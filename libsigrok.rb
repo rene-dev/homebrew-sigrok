@@ -10,6 +10,7 @@ class Libsigrok < Formula
   depends_on 'glib'
   depends_on 'libserialport' => :optional
   depends_on 'libusbx'
+  depends_on 'libtool'
   depends_on 'pkg-config' => :build
   depends_on "autoconf" => :build
   depends_on "automake" => :build
