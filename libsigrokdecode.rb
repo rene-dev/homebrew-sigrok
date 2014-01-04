@@ -1,15 +1,15 @@
 require 'formula'
 
-class SigrokCli < Formula
-  url 'http://sigrok.org/download/source/sigrok-cli/sigrok-cli-0.4.0.tar.gz'
+class Libsigrokdecode < Formula
+  url 'http://sigrok.org/download/source/libsigrokdecode/libsigrokdecode-0.2.0.tar.gz'
   homepage 'http://sigrok.org/'
-  head 'git://sigrok.org/sigrok-cli'
-  sha1 '2172480abf1b7c4be0d50ae3a0c94a7a37e13529'
+  head 'git://sigrok.org/libsigrokdecode'
+  sha1 '8c5de1c1a6097f5a1584e3d4635d3fb5e37307cb'
 
   depends_on 'libsigrok'
-  depends_on 'libsigrokdecode'
   depends_on 'glib'
   depends_on 'pkg-config' => :build
+  depends_on :python3
 
   def install
     if build.head?
@@ -19,7 +19,4 @@ class SigrokCli < Formula
     system "make", "install"
   end
 
-  test do
-    system "#{bin}/sigrok-cli", "--version"
-  end
 end
