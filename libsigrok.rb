@@ -21,6 +21,7 @@ class Libsigrok < Formula
     end
     system "./configure", "--prefix=#{prefix}"
     system "make", "install"
+    system "ln", "-s", "/usr/local/share/", "#{prefix}/share"
   end
 
 end
