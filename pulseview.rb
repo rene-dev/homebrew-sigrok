@@ -6,15 +6,20 @@ class Pulseview < Formula
   head 'git://sigrok.org/pulseview'
   sha1 '800450bdf65ce9c7559c2522a73b0a50e087bcc0'
 
-  depends_on 'libsigrok'
+  depends_on 'libsigrok' => :build
   depends_on 'libsigrokdecode'
+  depends_on :python3
+  depends_on 'libserialport'
   depends_on 'boost'
   depends_on 'qt'
   depends_on 'pkg-config' => :build
   depends_on 'cmake' => :build
+  depends_on 'glib'
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
 
   def install
-    system "cmake", "-DCMAKE_INSTALL_PREFIX=#{prefix}", "."
+    system "cmake", ".", "-DENABLE_DECODE=y", *std_cmake_args
     system "make", "install"
   end
 

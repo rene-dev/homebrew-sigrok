@@ -10,7 +10,7 @@ class SigrokCli < Formula
   depends_on 'libsigrokdecode'
   depends_on 'libserialport' => :optional
   depends_on 'glib'
-  depends_on 'libtool'
+  depends_on 'libtool' => :build
   depends_on 'pkg-config' => :build
   depends_on "autoconf" => :build
   depends_on "automake" => :build
