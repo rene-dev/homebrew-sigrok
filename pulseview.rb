@@ -10,6 +10,7 @@ class Pulseview < Formula
   depends_on 'libsigrokdecode'
   depends_on 'boost'
   depends_on 'qt'
+  depends_on 'pkg-config' => :build
   depends_on 'cmake' => :build
 
   def install
