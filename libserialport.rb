@@ -8,6 +8,8 @@ class Libserialport < Formula
 
   depends_on 'glib'
   depends_on 'libtool'
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
 
   def install
     system "./autogen.sh"

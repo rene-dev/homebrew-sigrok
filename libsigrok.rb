@@ -11,6 +11,8 @@ class Libsigrok < Formula
   depends_on 'libserialport' => :optional
   depends_on 'libusbx'
   depends_on 'pkg-config' => :build
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
 
   def install
     if build.head?
