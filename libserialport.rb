@@ -7,6 +7,7 @@ class Libserialport < Formula
   version 'dev'
 
   depends_on 'glib'
+  depends_on 'libtool'
 
   def install
     system "./autogen.sh"
