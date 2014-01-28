@@ -3,7 +3,7 @@ require 'formula'
 class SigrokCli < Formula
   url 'http://sigrok.org/download/source/sigrok-cli/sigrok-cli-0.4.0.tar.gz'
   homepage 'http://sigrok.org/'
-  head 'git://sigrok.org/sigrok-cli'
+  head 'git://sigrok.org/sigrok-cli',:using => Class.new(GitDownloadStrategy) { def support_depth?; false; end }
   sha1 '2172480abf1b7c4be0d50ae3a0c94a7a37e13529'
 
   depends_on 'libsigrok'

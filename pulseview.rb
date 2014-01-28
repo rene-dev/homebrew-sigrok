@@ -3,7 +3,7 @@ require 'formula'
 class Pulseview < Formula
   url 'http://sigrok.org/download/source/pulseview/pulseview-0.1.0.tar.gz'
   homepage 'http://sigrok.org/'
-  head 'git://sigrok.org/pulseview'
+  head 'git://sigrok.org/pulseview',:using => Class.new(GitDownloadStrategy) { def support_depth?; false; end }
   sha1 '800450bdf65ce9c7559c2522a73b0a50e087bcc0'
 
   depends_on 'libsigrok' => :build

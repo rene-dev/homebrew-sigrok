@@ -2,7 +2,7 @@ require 'formula'
 
 class Libserialport < Formula
   homepage 'http://sigrok.org/'
-  head 'git://sigrok.org/libserialport'
+  head 'git://sigrok.org/libserialport',:using => Class.new(GitDownloadStrategy) { def support_depth?; false; end }
   #sha1 ''
   version 'dev'
 

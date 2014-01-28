@@ -3,12 +3,13 @@ require 'formula'
 class Libsigrok < Formula
   url 'http://sigrok.org/download/source/libsigrok/libsigrok-0.2.2.tar.gz'
   homepage 'http://sigrok.org/'
-  head 'git://sigrok.org/libsigrok'
+  head 'git://sigrok.org/libsigrok',:using => Class.new(GitDownloadStrategy) { def support_depth?; false; end }
   sha1 '93004c49c5cad7df5e0fc7621df5ca9ed6e2a7df'
 
   depends_on 'libzip'
   depends_on 'glib'
   depends_on 'libserialport' => :optional
+  depends_on 'libftdi' => :optional
   depends_on 'libusbx'
   depends_on 'libtool'
   depends_on 'pkg-config' => :build
