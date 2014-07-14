@@ -19,6 +19,8 @@ class SigrokCli < Formula
     if build.head?
       system "./autogen.sh"
     end
+    py_ver = Formula["python3"].pkg_version.to_s[0..2] # e.g "3.4"
+    ENV.append_path "PKG_CONFIG_PATH", "#{HOMEBREW_PREFIX}/Frameworks/Python.framework/Versions/#{py_ver}/lib/pkgconfig/"
     system "./configure", "--prefix=#{prefix}"
     system "make", "install"
   end
