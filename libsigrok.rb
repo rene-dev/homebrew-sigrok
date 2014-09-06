@@ -1,10 +1,10 @@
 require 'formula'
 
 class Libsigrok < Formula
-  url 'http://sigrok.org/download/source/libsigrok/libsigrok-0.2.2.tar.gz'
+  url 'http://sigrok.org/download/source/libsigrok/libsigrok-0.3.0.tar.gz'
   homepage 'http://sigrok.org/'
   head 'git://sigrok.org/libsigrok',:using => Class.new(GitDownloadStrategy) { def support_depth?; false; end }
-  sha1 '93004c49c5cad7df5e0fc7621df5ca9ed6e2a7df'
+  sha1 '140db550820f98042d95432a87a9d7e3078b1490'
 
   depends_on 'libzip'
   depends_on 'glib'
