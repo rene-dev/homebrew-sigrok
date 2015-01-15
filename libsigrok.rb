@@ -12,8 +12,11 @@ class Libsigrok < Formula
   depends_on 'libftdi' => :optional
   depends_on 'libusb'
   depends_on 'libtool'
+  depends_on 'glibmm'
+  depends_on 'doxygen'
   depends_on 'pkg-config' => :build
   depends_on "autoconf" => :build
+  depends_on "autoconf-archive" => :build
   depends_on "automake" => :build
 
   def install
