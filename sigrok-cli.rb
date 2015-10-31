@@ -16,6 +16,7 @@ class SigrokCli < Formula
   depends_on "automake" => :build
 
   def install
+    ENV.delete "PYTHONPATH"
     if build.head?
       system "./autogen.sh"
     end
