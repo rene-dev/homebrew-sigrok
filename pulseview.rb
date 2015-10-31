@@ -7,7 +7,7 @@ class Pulseview < Formula
   sha1 '92be17ef8196fb98162d27b5c0fca382d92dee31'
 
   depends_on 'libsigrok' => :build
-  depends_on 'libsigrokdecode'
+  depends_on 'rene-dev/sigrok/libsigrokdecode'
   depends_on :python3
   depends_on 'libserialport'
   depends_on 'boost'
