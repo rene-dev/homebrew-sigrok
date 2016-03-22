@@ -4,10 +4,10 @@ class SigrokCli < Formula
   url 'http://sigrok.org/download/source/sigrok-cli/sigrok-cli-0.5.0.tar.gz'
   homepage 'http://sigrok.org/'
   head 'git://sigrok.org/sigrok-cli',:using => Class.new(GitDownloadStrategy) { def support_depth?; false; end }
-  sha1 '6fb5d6ff75f6492bca8d3da66ba446a6438438de'
+  sha256 '73a30501525b13c09624ae00d37041cdaa50238d89c6febf169fc784affe723c'
 
   depends_on 'libsigrok'
-  depends_on 'rene-dev/sigrok/libsigrokdecode'
+  depends_on 'libsigrokdecode'
   depends_on 'libserialport' => :optional
   depends_on 'glib'
   depends_on 'libtool' => :build
