@@ -7,7 +7,7 @@ class SigrokCli < Formula
   sha256 '73a30501525b13c09624ae00d37041cdaa50238d89c6febf169fc784affe723c'
 
   depends_on 'libsigrok'
-  depends_on 'libsigrokdecode'
+  depends_on 'rene-dev/sigrok/libsigrokdecode'
   depends_on 'libserialport' => :optional
   depends_on 'glib'
   depends_on 'libtool' => :build
