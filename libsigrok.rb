@@ -24,7 +24,7 @@ class Libsigrok < Formula
     if build.head?
       system "./autogen.sh"
     end
-    system "./configure", "--prefix=#{prefix}", "--disable-java", "--disable-sysclk-lwla"
+    system "./configure", "--prefix=#{prefix}", "--disable-java"
     system "make", "install"
     system "ln", "-s", "/usr/local/share/", "#{prefix}/share"
   end
