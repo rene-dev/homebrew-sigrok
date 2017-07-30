@@ -1,7 +1,7 @@
 require 'formula'
 
 class Libsigrokdecode < Formula
-  url 'http://sigrok.org/download/source/libsigrokdecode/libsigrokdecode-0..0.tar.gz'
+  url 'http://sigrok.org/download/source/libsigrokdecode/libsigrokdecode-0.5.0.tar.gz'
   homepage 'http://sigrok.org/'
   head 'git://sigrok.org/libsigrokdecode',:using => Class.new(GitDownloadStrategy) { def support_depth?; false; end }
   sha256 '4aa8579ecea9b421b8ac048a9b18c27e63206839f269374398d89c14a47bd1c1'
