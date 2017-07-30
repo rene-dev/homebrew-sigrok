@@ -1,13 +1,13 @@
 require 'formula'
 
 class Pulseview < Formula
-  url 'http://sigrok.org/download/source/pulseview/pulseview-0.3.0.tar.gz'
+  url 'http://sigrok.org/download/source/pulseview/pulseview-0.4.0.tar.gz'
   homepage 'http://sigrok.org/'
   head 'git://sigrok.org/pulseview',:using => Class.new(GitDownloadStrategy) { def support_depth?; false; end }
-  sha256 '5ffe2cb7a602fcdc60933d400c77bcd66e6ce529bc4f6e97d6a5e5a86f2f530e'
+  sha256 '78f8291045c6f65b4827b12e83c8e68cea2d5e7268b15a51aaca9726c8100eb9'
 
-  depends_on 'libsigrok' => :build
-  depends_on 'rene-dev/sigrok/libsigrokdecode'
+  depends_on 'andrimarjonsson/sigrok/libsigrok' => :build
+  depends_on 'andrimarjonsson/sigrok/libsigrokdecode'
   depends_on :python3
   depends_on 'libserialport'
   depends_on 'boost'

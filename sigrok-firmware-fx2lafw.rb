@@ -1,10 +1,10 @@
 require 'formula'
 
 class SigrokFirmwareFx2lafw < Formula
-  url 'http://sigrok.org/download/source/sigrok-firmware-fx2lafw/sigrok-firmware-fx2lafw-0.1.2.tar.gz'
+  url 'http://sigrok.org/download/source/sigrok-firmware-fx2lafw/sigrok-firmware-fx2lafw-0.1.5.tar.gz'
   homepage 'http://sigrok.org/'
   head 'git://sigrok.org/sigrok-firmware-fx2lafw',:using => Class.new(GitDownloadStrategy) { def support_depth?; false; end }
-  sha256 '85c658f851fd90089382756b4c5f0326f96d630a0ad5637455a84a4a058b3572'
+  sha256 'ca74096b93baed48ef3e59ce0c97111153b9a2a8841c40019500b09b897f6d2d'
 
   depends_on 'glib'
   depends_on 'libtool'

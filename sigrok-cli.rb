@@ -1,13 +1,13 @@
 require 'formula'
 
 class SigrokCli < Formula
-  url 'http://sigrok.org/download/source/sigrok-cli/sigrok-cli-0.5.0.tar.gz'
+  url 'http://sigrok.org/download/source/sigrok-cli/sigrok-cli-0.7.0.tar.gz'
   homepage 'http://sigrok.org/'
   head 'git://sigrok.org/sigrok-cli',:using => Class.new(GitDownloadStrategy) { def support_depth?; false; end }
-  sha256 '73a30501525b13c09624ae00d37041cdaa50238d89c6febf169fc784affe723c'
+  sha256 '5669d968c2de3dfc6adfda76e83789b6ba76368407c832438cef5e7099a65e1c'
 
-  depends_on 'libsigrok'
-  depends_on 'rene-dev/sigrok/libsigrokdecode'
+  depends_on 'andrimarjonsson/sigrok/libsigrok'
+  depends_on 'andrimarjonsson/sigrok/libsigrokdecode'
   depends_on 'libserialport' => :optional
   depends_on 'glib'
   depends_on 'libtool' => :build
