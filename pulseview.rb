@@ -6,8 +6,8 @@ class Pulseview < Formula
   head 'git://sigrok.org/pulseview',:using => Class.new(GitDownloadStrategy) { def support_depth?; false; end }
   sha256 '78f8291045c6f65b4827b12e83c8e68cea2d5e7268b15a51aaca9726c8100eb9'
 
-  depends_on 'andrimarjonsson/sigrok/libsigrok' => :build
-  depends_on 'andrimarjonsson/sigrok/libsigrokdecode'
+  depends_on 'rene-dev/sigrok/libsigrok' => :build
+  depends_on 'rene-dev/sigrok/libsigrokdecode'
   depends_on :python3
   depends_on 'libserialport'
   depends_on 'boost'
