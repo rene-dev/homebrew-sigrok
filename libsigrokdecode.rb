@@ -9,7 +9,7 @@ class Libsigrokdecode < Formula
   depends_on 'rene-dev/sigrok/libsigrok'
   depends_on 'glib'
   depends_on 'pkg-config' => :build
-  depends_on :python3
+  depends_on "python3"
   depends_on "autoconf" => :build
   depends_on "automake" => :build
 

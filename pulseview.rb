@@ -8,7 +8,7 @@ class Pulseview < Formula
 
   depends_on 'rene-dev/sigrok/libsigrok' => :build
   depends_on 'rene-dev/sigrok/libsigrokdecode'
-  depends_on :python3
+  depends_on "python3"
   depends_on 'libserialport'
   depends_on 'boost'
   depends_on 'qt'
