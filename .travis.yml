@@ -1,0 +1,22 @@
+language: c
+
+compiler:
+  - clang
+  - gcc
+
+os:
+  - osx
+
+osx_image: xcode8
+
+before_install:
+  - brew update
+
+script:
+  - brew tap rene-dev/sigrok
+  - brew install --HEAD rene-dev/sigrok/libserialport
+  - brew install --HEAD --with-libserialport rene-dev/sigrok/libsigrok
+  - brew install --HEAD rene-dev/sigrok/libsigrokdecode
+  - brew install --HEAD --with-libserialport rene-dev/sigrok/sigrok-cli
+  - brew install --HEAD --with-libserialport rene-dev/sigrok/sigrok-firmware-fx2lafw
+  - brew install --HEAD rene-dev/sigrok/pulseview
